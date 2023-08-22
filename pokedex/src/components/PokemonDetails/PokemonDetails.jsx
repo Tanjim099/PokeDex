@@ -7,11 +7,9 @@ import { Link } from "react-router-dom";
 import usePokemon from "../../hooks/usePokemon";
 import Pokemon from "../Pokemon/Pokemon";
 
-function PokemoDetails() {
+function PokemoDetails({ pokemonName }) {
 
-    const { id } = useParams();
-
-    const [pokemon, pokemonListState] = usePokemon(id)
+    const [pokemon, pokemonListState] = usePokemon(pokemonName)
     return (
         <>
             <h1 className="pokedex-redirect">
